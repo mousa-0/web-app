@@ -44,12 +44,11 @@ app.use(
       authRequired: false,
       auth0Logout: true,
       baseURL: APP_URL,
-      // 👇 add this 👇
       authorizationParams: {
         response_type: "code id_token",
         audience: "https://expenses-api",
+        scope: "openid profile email read:reports",
       },
-      // 👆 add this 👆
    })
 );
 
